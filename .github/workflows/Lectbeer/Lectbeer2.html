@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LECT Brewery</title>
+    <link rel="stylesheet" href="beer-wave.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="icon" href="photo/logo.jpg" type="imag/png">
+</head>
+
+<body> <canvas id="c"></canvas>
+    <div id="fadeOverlay"></div>
+    <div class="ticker-wrap">
+        <div class="ticker-track" id="tickerTrack">
+            <span class="ticker-item">LECT BREWERY</span>
+            <span class="ticker-item">LECT BREWERY</span>
+            <span class="ticker-item">LECT BREWERY</span>
+            <span class="ticker-item">LECT BREWERY</span>
+            <span class="ticker-item">LECT BREWERY</span>
+            <span class="ticker-item">LECT BREWERY</span>
+            <span class="ticker-item">LECT BREWERY</span>
+            <span class="ticker-item">LECT BREWERY</span>
+        </div>
+    </div>
+    <div class="modal-wrap" id="modalWrap">
+        <div class="modal-backdrop"></div>
+        <div class="modal">
+            <div class="modal-logo">Lect Beer</div>
+            <div class="modal-divider"></div>
+            <h2>このサイトをご覧になるには<br>20歳以上である必要があります</h2>
+            <p class="modal-sub">Are you 20 years of age or older?</p>
+            <div class="btn-group" id="btnGroup"> <button class="btn btn-yes" onclick="enterSite()">はい / Yes</button>
+                <button class="btn btn-no" onclick="underage()">いいえ / No</button>
+            </div>
+            <p class="underage-msg" id="underageMsg"> 申し訳ございません。<br> 20歳未満の方はご利用いただけません。<br><br> <span
+                    style="font-size:0.75rem;opacity:0.6;">We're sorry, this site is for adults only.</span> </p>
+        </div>
+    </div>
+    <script src="LectBeer2.js">
+    </script>
+
+</body>
+
+</html>
