@@ -1,0 +1,351 @@
+/* --- リセット & 基本設定 --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* <body>自体の背景は透明にして下の画像を見せる */
+body {
+    background-color: transparent;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* --- 【最重要】ページ全体に固定されるメイン画像 --- */
+.fixed-main-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-image: url('images/hero.png'); /* あなたの画像パス */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* スクロールしても動かさない */
+    z-index: -2; /* 全ての要素の最背面に配置 */
+}
+.logo {
+    font-family: 'Pinyon Script', cursive; /* 筆記体フォントを適用 */
+    font-size: 70px;                     /* 文字の大きさ */
+    letter-spacing: 14px;                 /* 文字と文字の間隔 */
+    color: #ffffff;                       /* 文字の色（最初から白で指定） */
+    
+    /* 👇 背景浮き出しバグを防ぐための新しいアニメーション設定 */
+    display: inline-block;
+    white-space: nowrap;
+    
+    /* 最初は左端に幅0のマスクをかけて完全に非表示にする */
+    clip-path: inset(0 100% 0 0); 
+    
+    /* 2.5秒かけてマスクを右に開き、文字を描画する（0.5秒待ってからスタート） */
+    animation: writeTextNew 2.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    animation-delay: 0.5s;
+}
+
+/* 左から右へマスクを開いていくキーフレーム */
+@keyframes writeTextNew {
+    0% {
+        clip-path: inset(0 100% 0 0); /* 完全に隠れた状態 */
+    }
+    100% {
+        clip-path: inset(0 0% 0 0);   /* 全て表示された状態 */
+    }
+}
+
+
+/* 左から右へ文字を染めていくキーフレーム */
+@keyframes writeText {
+    0% {
+        background-position: 100% 0;
+    }
+    100% {
+        background-position: 0% 0;
+    }
+}
+
+
+/* 画像の上にうっすら暗いフィルターをかけ、ページ全体の文字を読みやすくする */
+.fixed-main-bg::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2); /* 0.2 の数値を上げると画像が暗くなります */
+    z-index: -1;
+}
+
+/* --- レイアウト共通（ここが透けるボックスになります） --- */
+.section {
+    padding: 60px 30px;
+    max-width: 900px;
+    margin: 60px auto; /* セクション間に隙間を作って、背景画像を見せる */
+    
+    /* 【ポイント】白を85%の不透明度にして、背景を透けさせつつ文字をクッキリ見せる */
+    background-color: rgba(255, 255, 255, 0.85); 
+    border-radius: 12px; /* 角を丸くして上品なカード風にする */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* 高級感のある影 */
+}
+
+/* スキルやお問い合わせも共通の幅と透明度にする */
+.bg-light {
+    background-color: rgba(247, 249, 250, 0.9); /* 少しだけグレー寄りの半透明 */
+    max-width: 900px;
+    margin: 60px auto;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 3px;
+    background-color: #333;
+    margin: 10px auto 0;
+}
+
+/* --- ヘッダー --- */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.9); /* ヘッダーも少し透けさせる */
+    backdrop-filter: blur(5px); /* 背景を少しボカすおしゃれエフェクト */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    z-index: 100;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 15px 20px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 24px;
+}
+
+.nav-links a {
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #0076df;
+}
+
+/* --- メインビジュアル (Hero) --- */
+.hero {
+    height: 75vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+    margin-top: 50px;
+    background: transparent; /* 背景は完全に透明にしてメイン画像を見せる */
+}
+
+.hero-content {
+    color: #fff;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6); /* 画像に負けないよう文字に影をつける */
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 35px;
+    opacity: 0.95;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #fff;
+    color: #333;
+    padding: 14px 35px;
+    border-radius: 25px;
+    font-weight: bold;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    transition: all 0.3s;
+}
+
+.btn:hover {
+    background-color: #0076df;
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+/* --- 自己紹介 (About) --- */
+.about-container {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.about-text h3 {
+    font-size: 1.6rem;
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    color: #666;
+    margin-bottom: 25px;
+    font-size: 0.95rem;
+}
+
+/* --- スキル (Skills) --- */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.skill-card {
+    background-color: rgba(255, 255, 255, 0.9); /* カードの内側は少し濃い白 */
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+    border: 1px solid rgba(0,0,0,0.05);
+}
+
+.skill-card h3 {
+    margin-bottom: 12px;
+    color: #0076df;
+    font-size: 1.25rem;
+}
+
+/* --- 制作実績 (Works) --- */
+.works-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+}
+
+.work-item {
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.work-item:hover {
+    transform: translateY(-5px);
+}
+
+.work-item h3 {
+    font-size: 1.15rem;
+    margin-bottom: 5px;
+}
+
+.work-item p {
+    color: #666;
+    font-size: 0.85rem;
+}
+/* 画像を囲む枠を元のプレースホルダーのサイズ（横長）に固定する */
+.work-thumb {
+    width: 100%;
+    aspect-ratio: 16 / 9; /* 横16 : 縦9 の比率に固定（※元のサイズに合わせて 3 / 2 などに変えてもOK） */
+    background-color: #eee; /* 万が一画像が読み込めない時のグレー背景 */
+    overflow: hidden; /* 枠からはみ出た画像を非表示にする */
+    border-radius: 4px; /* もし元々角が丸まっていたらその再現（不要なら消してOK） */
+}
+
+/* 中の画像に対する指示 */
+.work-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 画像の縦横比を崩さず、枠いっぱいに綺麗に収める（最重要） */
+    object-position: center; /* 画像の中心が真ん中に来るようにする */
+    display: block;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.modal-close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #aaa;
+}
+
+.modal-close:hover {
+    color: #333;
+}
+
+.modal-body {
+    margin-top: 20px;
+}
+
+.modal-body p {
+    margin-bottom: 15px;
+}
+
+/* --- お問い合わせ (Contact) --- */
+.contact-container {
+    text-align: center;
+}
+
+.email {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+.email a {
+    color: #0076df;
+    text-decoration: underline;
+}
+
+.sns-links a {
+    margin: 0 10px;
+    color: #444;
+    border-bottom: 1px solid #444;
+    font-weight: 500;
+    transition: all 0.3s;
+}
+
+.sns-links a:hover {
+    color: #0076df;
+    border-color: #0076df;
+}
+
+/* --- フッター --- */
+footer {
+    background-color: rgba(51, 51, 51, 0.95);
+    color: #fff;
+    text-align: center;
+    padding: 25px;
+    font-size: 0.8rem;
+    position: relative;
+    z-index: 10;
+}

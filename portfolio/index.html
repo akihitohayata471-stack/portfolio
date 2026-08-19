@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Akihito Hayata</title>
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="fixed-main-bg"></div>
+    <!-- ヘッダーナビゲーション -->
+    <header>
+        <nav class="nav-container">
+            <div > Akihito Hayata</div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#works">Works</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- メインビジュアル -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="logo">Portfolio</h1>
+            <p>丁寧なコーディングと、課題を解決する実装を。</p>
+            <a href="#works" class="btn">実績を見る</a>
+        </div>
+    </section>
+
+    <!-- 自己紹介 -->
+    <section id="about" class="section">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-container">
+            <div class="about-text">
+                <h3></h3>
+                <p class="subtitle">フロントエンドエンジニア / Webデザイナー</p>
+                <p>プロの料理人およびワインソムリエとして、一皿のクオリティにこだわり、お客様の潜在的なニーズを汲み取る仕事をしてまいりました。飲食のプロとして「時間内に最高の価値を提供する圧倒的な当事者意識」を叩き込んできました。この姿勢を現在は技術学習に向けており、現在は[使用している言語、HTML/CSS, JavaScript, phpを用いたモダンなWebアプリケーション開発を学んでいます。技術を手段として捉え、ユーザーファーストで「使い心地の良いシステム」を追求し続けます。未経験からのスタートですが、未知の技術も貪欲にインプットし、現場の課題を解決できるエンジニアを目指します。</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- スキル -->
+    <section id="skills" class="section bg-light">
+        <h2 class="section-title">Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-card">
+                <h3>取得資格</h3>
+                <p>ITパスポート<br>
+                HTML5プロフェッショナル認定試験レベル1<br>
+                HTML5プロフェッショナル認定試験レベル2<br>
+                </p>
+            </div>
+            <div class="skill-card">
+                <h3>HTML5 / CSS3</h3>
+                <p>セマンティックなマークアップ、Flexbox/Gridを用いたレスポンシブ対応、BEM等の設計思想に基づいたCSS設計が可能です。</p>
+            </div>
+            <div class="skill-card">
+                <h3>JavaScript</h3>
+                <p>Vanilla JSによる動的なUI実装、非同期処理、Web APIとの連携などが可能です。ES6以降の構文に対応できます。</p>
+            </div>
+            <div class="skill-card">
+                <h3>PHP</h3>
+                <p>オリジナルテーマの作成、カスタム投稿タイプ・カスタムフィールドを用いた、クライアントが更新しやすいサイト構築が可能です。</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 制作実績 -->
+   <section id="works" class="section">
+    <h2 class="section-title">Works</h2>
+    <div class="works-grid">
+
+        <!-- 実績1：架空Brewery -->
+        <a href="../Lectbeer/Lectbeer2.html">
+                 <img src="images/brewery.jpg" class="work-thumb">
+            <h3>架空Brewery</h3>
+             <p><strong>制作期間：</strong> 2週間</p>
+                <p><strong>担当範囲：</strong> デザイン・コーディング</p>
+                <p><strong>使用スキル：</strong>HTML/CSS/JavaScript</p>
+                <p><strong>作品説明：</strong><br>
+                企業の信頼性を伝えるため、ブルーを基調としたクリーンなデザインを採用。JavaScriptを用いたスムーススクロールや、スマホ対応のハンバーガーメニューを自作しました。</p>
+                <p><strong>課題と工夫点：</strong><br>
+                CSS Gridを用いて、崩れにくく保守性の高いレスポンシブレイアウトを構築しました。</p>
+        </a>
+
+        <!-- 実績2：台湾紹介サイト -->
+        <a href="../taiwan/index.html">
+                 <img src="images/taiwan.jpg "class="work-thumb">
+            <h3>台湾紹介サイト</h3>
+            <p><strong>制作期間：</strong> 1週間</p>
+                <p><strong>担当範囲：</strong> コーディング</p>
+                <p><strong>使用スキル：</strong> HTML/CSS/JavaScript</p>
+                <p><strong>作品説明：</strong><br>
+                商品の魅力を引き出すため、ファーストビューのグラデーションや、スクロールに応じたふわっとした浮き上がりアニメーションを実装しました。</p>
+        </a>
+
+        <!-- 実績3：架空リフォーム会社 -->
+        <a href="../renovation/index.html">
+                 <img src="images/renovation.png "class="work-thumb" >
+            <h3>架空リフォーム会社</h3>
+            <p><strong>制作期間：</strong> 1週間</p>
+                <p><strong>担当範囲：</strong> コーディング</p>
+                <p><strong>使用スキル：</strong> HTML/CSS</p>
+                <p><strong>作品説明：</strong><br>
+                商品の魅力を引き出すため、ファーストビューのグラデーションや、スクロールに応じたふわっとした浮き上がりアニメーションを実装しました。</p>
+        </a>
+
+    </div>
+</section>
+
+    <!-- お問い合わせ・リンク -->
+    <section id="contact" class="section bg-light">
+        <h2 class="section-title">Contact</h2>
+        <div class="contact-container">
+            <p>お仕事のご依頼や、ポートフォリオに関するお問い合わせは、以下のメールアドレスまたはGitHub/SNSよりお願いいたします。</p>
+            <p class="email">Email: <a href="mailto:akihitohayata471@gmail.com">akihitohayata471@gmail.com</a></p>
+        </div>
+    </section>
+
+    <!-- フッター -->
+    <footer>
+        <p>&copy; 2026 Akihito Hayata. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
