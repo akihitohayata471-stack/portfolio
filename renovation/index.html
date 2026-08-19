@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design House Renovations</title>
+    <link rel="stylesheet" href="common/reset.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+</head>    
+<body>
+   <header>
+  <div id="midasi" class="midasi">
+    <h1><img src="images/logo.png" alt="Design House Renovations"></h1>
+
+    <a href="#nav-open" class="hamburger-btn" aria-label="メニューを開く">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span class="visually-hidden">メニューを開閉する</span>
+    </a>
+
+    <nav id="nav-open" role="navigation" aria-label="主要ナビゲーション" class="nav-menu">
+      <a href="#midasi" class="nav-close" aria-label="メニューを閉じる">
+        <span class="visually-hidden">メニューを閉じる</span>
+      </a>
+      <ul>
+        <li><a href="#concept">コンセプト</a></li>
+        <li><a href="#service">サービス</a></li>
+        <li><a href="#flow">施工／流れ</a></li>
+        <li><a href="#qa">よくあるご質問</a></li>
+        <li><a href="#contact">お問い合わせ</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+    <main>
+        <section id="concept" aria-labelledby="concept-title">
+            <h2 id="concept-title" data-subtitle="コンセプト">CONCEPT</h2>
+            <p>家族が笑顔になれる場所</p>
+            <p><span>家族が集う、温かく居心地の良い空間づくりを目指して、</span><span>幅広い年代の方に安心して過ごしていただける空間づくりや、</span><span>お手入れのしやすい素材を使用したリフォームをご提案いたします。</span></p>
+        </section>
+                <section id="service" aria-labelledby="service-title">
+            <h2 id="service-title" data-subtitle="サービス">SERVICE</h2>
+            <div class="service-list" role="region" aria-label="サービス一覧">
+                <div class="service-item">
+                    <img src="images/list-1-img.png" alt="広めの浴槽に手すりがついた浴室リフォームの施工例">
+                    <h3>浴室</h3>
+                    <p><span>ご家族が一緒に入れる広めの浴槽や手</span><br><span>すり等、安全性に配慮しています。</span></p>
+                    <a href="#" class="more-btn" aria-label="浴室リフォームについて詳しく見る">more</a>
+                </div>
+                <div class="service-item">
+                    <img src="images/list-2-img.png" alt="明るい照明とくつろぎやすい家具が配置されたリビングリフォームの施工例">
+                    <h3>リビング</h3>
+                    <p><span>照明や家具の配置等、くつろぎやすい</span><br><span>空間づくりを大切にしています。</span></p>
+                    <a href="#" class="more-btn" aria-label="リビングリフォームについて詳しく見る">more</a>
+                </div>
+                <div class="service-item">
+                    <img src="images/list-3-img.png" alt="機能性とデザイン性を両立したシステムキッチンの施工例">
+                    <h3>キッチン</h3>
+                    <p><span>機能性だけでなく、デザイン性にもこ</span><br><span>だわっております。</span></p>
+                    <a href="#" class="more-btn" aria-label="キッチンリフォームについて詳しく見る">more</a>
+                </div>
+            </div>
+        </section>
+        <section id="flow" class="flow" aria-labelledby="flow-title">
+            <div class="flow-title-wrap">
+            <h2 id="flow-title" data-subtitle="施工の流れ">FLOW</h2></div>
+            <div class="flow-container" role="list" aria-label="施工の流れステップ">
+                <div class="flow-item" role="listitem"><span>ご相談</span></div>
+                <div class="flow-arrow" aria-hidden="true"></div>
+                <div class="flow-item" role="listitem"><span>現地調査</span></div>
+                <div class="flow-arrow" aria-hidden="true"></div>
+                <div class="flow-item" role="listitem"><span>お見積り</span></div>
+                <div class="flow-arrow" aria-hidden="true"></div>
+                <div class="flow-item" role="listitem"><span>ご契約</span></div>
+                <div class="flow-arrow" aria-hidden="true"></div>
+                <div class="flow-item" role="listitem"><span>施工</span></div>
+                <div class="flow-arrow" aria-hidden="true"></div>
+                <div class="flow-item" role="listitem"><span>お引渡し</span></div>
+            </div>
+            </section>
+                    <section id="qa" class="qa" aria-labelledby="qa-title">
+            <h2 id="qa-title" data-subtitle="よくあるご質問">Q&A</h2>
+            <div class="qa-container">
+                <div class="qa-item">
+                    <div class="qa-row question">
+                        <span class="icon" aria-hidden="true">Q.</span>
+                        <p class="text"><span class="visually-hidden">質問：</span><span>見積りは無料ですか？</span></p>
+                    </div>
+                    <div class="qa-row answer">
+                        <span class="icon" aria-hidden="true">A.</span>
+                        <p class="text"><span class="visually-hidden">回答：</span><span>はい。お見積りは無料（フリー）で承っております。</span><span>ホームページよりお気軽にお問い合わせください。</span></p>
+                    </div>
+                </div>
+                <div class="qa-item">
+                    <div class="qa-row question">
+                        <span class="icon" aria-hidden="true">Q.</span>
+                        <p class="text"><span class="visually-hidden">質問：</span><span>普段通り生活をしながらのリフォーム工事は可能ですか？</span></p>
+                    </div>
+                    <div class="qa-row answer">
+                        <span class="icon" aria-hidden="true">A.</span>
+                        <p class="text"><span class="visually-hidden">回答：</span><span>はい。もちろん可能です。</span><span>工事中の箇所は、何日間か使用できなくなる場合もございますのであらかじめご了承ください。</span><span>大型リフォームの場合には、仮住まいもお薦めしております。</span></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="contact" aria-labelledby="contact-title">
+            <h2 id="contact-title" data-subtitle="お問い合わせ">CONTACT</h2>
+            <form action="" method="post" class="contact-inner">
+                <div class="form-group" role="group" aria-labelledby="label-type">
+                    <div id="label-type" class="form-group-label">お問い合わせ種別 <span class="required" aria-hidden="true">必須</span></div>
+                    <div class="radio-group">
+                        <label><input type="radio" name="type" value="資料請求" required aria-required="true"> 資料請求</label>
+                        <label><input type="radio" name="type" value="ご相談" required aria-required="true"> ご相談</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="name">お名前 <span class="required" aria-hidden="true">必須</span></label>
+                    <input type="text" id="name" required aria-required="true" autocomplete="name">
+                </div>
+                <div class="form-group">
+                    <label for="kana">フリガナ <span class="required" aria-hidden="true">必須</span></label>
+                    <input type="text" id="kana" required aria-required="true">
+                </div>
+                <div class="form-group">
+                    <label for="tel">電話番号 <span class="required" aria-hidden="true">必須</span></label>
+                    <input type="tel" id="tel" required aria-required="true" autocomplete="tel">
+                </div>
+                <div class="form-group" role="group" aria-labelledby="label-address">
+                    <div id="label-address" class="form-group-label">住所<span class="required" aria-hidden="true">必須</span></div>
+                    <div class="zip-row">
+                        <div class="zip-input-wrap">
+                            <label for="zip">〒</label>
+                            <input type="text" id="zip" name="zip" required aria-required="true" autocomplete="postal-code">
+                        </div>
+                        <label for="address" class="visually-hidden">市区町村・番地・ビル名</label>
+                        <input type="text" id="address" name="address" required aria-required="true" autocomplete="street-address">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="email">メールアドレス <span class="required" aria-hidden="true">必須</span></label>
+                    <input type="email" id="email" required aria-required="true" autocomplete="email">
+                </div>
+                <div class="form-group">
+                    <label for="email-confirm">メールアドレス(確認用) <span class="required" aria-hidden="true">必須</span></label>
+                    <input type="email" id="email-confirm" required aria-required="true">
+                </div>
+                <div class="form-group">
+                    <label for="message">お問い合わせ内容</label>
+                    <textarea id="message" rows="5"></textarea>
+                </div>
+                <div class="form-submit">
+                    <button type="submit">入力内容を確認する</button>
+                </div>
+            </form>
+        </section>
+    </main>
+    <footer id="footer">
+        <p>&copy; 2023 Design House Renovations</p>
+        <a href="#" class="page-top-btn">
+            <img src="images/pageTop.png" alt="">
+            <span class="visually-hidden">ページトップへ戻る</span>
+        </a>
+    </footer>
+</body>
+</html>
